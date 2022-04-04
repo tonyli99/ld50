@@ -12,6 +12,7 @@ namespace __Game.Scripts
         private float speed = 10;
         private float lifetime = 3;
         private int damage = 100;
+        private bool hitEnemy = false;
         
         public Vector3 Direction { get; set; }
 
@@ -20,23 +21,28 @@ namespace __Game.Scripts
         public override void Initialize()
         {
             base.Initialize();
+            hitEnemy = false;
             Invoke(nameof(Despawn), lifetime);
         }
 
         private void FixedUpdate()
         {
-            var newPos = transform.position + Direction * speed * Time.fixedDeltaTime;
-            var distance = Vector3.Distance(transform.position, newPos);
-            int numHits = Physics.RaycastNonAlloc(transform.position, (newPos - transform.position).normalized, hits,
-                distance);
-            for (int i = 0; i < numHits; i++)
-            {
-                var hit = hits[i]; 
-                var alien = hit.collider.GetComponent<Alien>();
-                if (alien != null) alien.TakeDamage(damage);
-                Despawn();
-            }
-            transform.position = newPos;
+                var newPos = transform.position + Direction * speed * Time.fixedDeltaTime;
+                var distance = Vector3.Distance(transform.position, newPos);
+                if (!hitEnemy)
+                {
+                    int numHits = Physics.RaycastNonAlloc(transform.position, (newPos - transform.position).normalized,
+                        hits,
+                        distance);
+                    for (int i = 0; i < numHits; i++)
+                    {
+                        var hit = hits[i];
+                        var alien = hit.collider.GetComponent<Alien>();
+                        if (alien != null) alien.TakeDamage(damage);
+                        hitEnemy = true;
+                    }
+                }
+                transform.position = newPos;
         }
 
         private void Despawn()

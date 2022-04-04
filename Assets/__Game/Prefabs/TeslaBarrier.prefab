@@ -137,12 +137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7893a5bc87ba18f4ea7fdc0ae776bf26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
+  maxHealth: 80
+  health: 80
   fireParticleSystem: {fileID: 5819833589026255378}
   recipes: []
   damage: 1
-  damageFrequency: 0.5
+  damageFrequency: 0.1
 --- !u!135 &8148664572476983485
 SphereCollider:
   m_ObjectHideFlags: 0

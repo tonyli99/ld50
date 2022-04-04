@@ -24,6 +24,7 @@ namespace __Game.Scripts
 
         private void TryFire()
         {
+            inRange.RemoveAll(alien => alien == null || alien.Health <= 0);
             if (inRange.Count > 0)
             {
                 var target = inRange[Random.Range(0, inRange.Count)];
