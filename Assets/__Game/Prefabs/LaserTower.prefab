@@ -331,8 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a1f96dddb8c694a9fe0a8ce717ccf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
+  maxHealth: 75
+  health: 75
   fireParticleSystem: {fileID: 4212516430255011226}
   recipes: []
   line: {fileID: 2439214801121477633}

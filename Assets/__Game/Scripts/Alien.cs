@@ -14,7 +14,7 @@ namespace __Game.Scripts
         [SerializeField] private AudioClip biteSound;
         [SerializeField] private AudioClip dieSound;
         
-        private int damage = 1;
+        private int damage = 2;
         private float damageRate = 0.5f;
         
         private NavMeshAgent navMeshAgent;
