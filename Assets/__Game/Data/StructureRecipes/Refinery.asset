@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 067b1509cbab5bd4f8298d468e8c0f77, type: 3}
+  m_Name: Refinery
+  m_EditorClassIdentifier: Assembly-CSharp:__Game.Scripts:StructureRecipeAsset
+  buttonSprite: {fileID: 21300000, guid: 0dbf26f4c448487448bd75d129d842fd, type: 3}
+  selectorSprite: {fileID: 21300000, guid: 7bcdc014b1cd6d945a6f8fb7a29c6335, type: 3}
+  structure: {fileID: 9107145448803085193, guid: a608cee94788c5545b236b4d51785575, type: 3}
+  gasCost: 40
