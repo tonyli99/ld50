@@ -62,7 +62,6 @@ namespace __Game.Scripts
         
         public bool OverlapsUnits(Vector3 pos)
         {
-            Debug.DrawLine(pos + new Vector3(1, 0, 1), pos + new Vector3(-1, 0, -1), Color.red);
             RaycastHit hit;
             if (Physics.Raycast(pos + Vector3.up, Vector3.down, out hit))
             {

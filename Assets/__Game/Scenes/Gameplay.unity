@@ -3133,6 +3133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alienPrefab: {fileID: 6758563545760953521, guid: 459cc36d993348b41b03431b93c53913, type: 3}
+  alienWallbreakerPrefab: {fileID: 2012635030667025523, guid: 333f9486afeca4d47a06a725600c814d, type: 3}
+  explosionPrefab: {fileID: 4273848851624457592, guid: 097581bb894ad1f41a18ee5ebdf4e8a0, type: 3}
   bulletPrefab: {fileID: 4621079260560478529, guid: ce01dba72fb88944dbe07cf25b172655, type: 3}
   flashImage: {fileID: 1857218739}
   buildSound: {fileID: 8300000, guid: ed9471c0506df684b89df0902d30ae60, type: 3}

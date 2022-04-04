@@ -15,6 +15,7 @@ namespace __Game.Scripts
         private float timeToEmerge;
         private int numToSpawn;
         private int broodSize = 1;
+        private int numSpawned = 0;
 
         private void Start()
         {
@@ -27,7 +28,15 @@ namespace __Game.Scripts
             {
                 timeToEmerge = Time.time + emergeFrequency;
                 numToSpawn--;
-                Game.Instance.AlienPool.Spawn(transform.position, Quaternion.identity);
+                numSpawned++;
+                if (numSpawned % 10 == 0)
+                {
+                    Game.Instance.AlienWallbreakerPool.Spawn(transform.position, Quaternion.identity);   
+                }
+                else
+                {
+                    Game.Instance.AlienPool.Spawn(transform.position, Quaternion.identity);
+                }
             }
         }
 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Random = System.Random;
 
 namespace __Game.Scripts
 {
@@ -13,10 +14,26 @@ namespace __Game.Scripts
         private Transform myTransform;
 
         private const float PPU = 64;
+        private const float ShakeDuration = 1;
+        private const float ShakeAmount = 1f;
+        private Vector3 shakeOffset = Vector3.zero;
+        private Vector3 cameraPos;
+        
+        public static CameraController Instance { get; private set; }
+        
+#if UNITY_EDITOR
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void Init()
+        {
+            Instance = null;
+        }
+#endif
 
         private void Awake()
         {
+            Instance = this;
             myTransform = GetComponent<Transform>();
+            cameraPos = myTransform.position;
         }
 
         private void Update()
@@ -35,11 +52,28 @@ namespace __Game.Scripts
             var bounds = new Vector3(Game.Instance.Map.Radius - Screen.width / PPU, 0,
                 Game.Instance.Map.Radius - Screen.height / PPU);
             var multiplier = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) ? 4 : 1;
-            var newPos = myTransform.position + (move * speed * multiplier * Time.deltaTime);
+            var newPos = cameraPos + (move * speed * multiplier * Time.deltaTime);
             newPos.x = Mathf.Clamp(newPos.x, -bounds.x, bounds.x);
             newPos.z = Mathf.Clamp(newPos.z, -bounds.z, bounds.z);
-            myTransform.position = newPos;
+            cameraPos = newPos;
+            myTransform.position = cameraPos + shakeOffset;
+        }
 
+        public void Shake()
+        {
+            StartCoroutine(ShakeCoroutine());
+        }
+
+        private IEnumerator ShakeCoroutine()
+        {
+            float elapsed = 0;
+            while (elapsed < ShakeDuration)
+            {
+                shakeOffset = new Vector3((UnityEngine.Random.value - 0.5f) * ShakeAmount, 0, (UnityEngine.Random.value - 0.5f) * ShakeAmount);
+                yield return null;
+                elapsed += Time.deltaTime;
+            }
+            shakeOffset = Vector3.zero;
         }
     }
 }

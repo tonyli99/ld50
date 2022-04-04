@@ -8,9 +8,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld50/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld50/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/__Game/Prefabs/TeslaBarrier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Prefabs/TeslaBarrier.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/__Game/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Scripts/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/__Game/Scripts/BulletTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Scripts/BulletTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Game/Data/StructureRecipes/Bullet Tower.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Data/StructureRecipes/Bullet Tower.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Game/Prefabs/Vent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Prefabs/Vent.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Game/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Scenes/Gameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Game/Scripts/Alien.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Scripts/Alien.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Game/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Game/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Scripts/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Game/Scripts/Nest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Scripts/Nest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Game/Scripts/Structure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Game/Scripts/Structure.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/__Game/Scripts/Explosion.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="27JTspucKWEEz2lATiOYWnO2Nls" />
   <component name="ProjectViewState">
@@ -70,6 +78,7 @@
       <workItem from="1649037409638" duration="1934000" />
       <workItem from="1649077645212" duration="551000" />
       <workItem from="1649082255927" duration="688000" />
+      <workItem from="1649100603227" duration="3273000" />
     </task>
     <servers />
   </component>
@@ -79,6 +88,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

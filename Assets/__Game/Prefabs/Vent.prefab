@@ -135,4 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3ce436b5cda934280922d389d98699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gas: 250
+  gas: 200

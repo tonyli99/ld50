@@ -11,6 +11,7 @@ namespace __Game.Scripts
     public class Alien : HealthEntity
     {
 
+        [SerializeField] private bool isExploder;
         [SerializeField] private AudioClip biteSound;
         [SerializeField] private AudioClip dieSound;
         
@@ -89,7 +90,14 @@ namespace __Game.Scripts
             base.TakeDamage(damageTaken);
             if (Health <= 0)
             {
-                AudioSource.PlayClipAtPoint(dieSound, transform.position);
+                if (isExploder)
+                {
+                    Game.Instance.ExplosionPool.Spawn(transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    AudioSource.PlayClipAtPoint(dieSound, transform.position);
+                }
             }
         }
     }

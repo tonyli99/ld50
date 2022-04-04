@@ -11,6 +11,8 @@ namespace __Game.Scripts
     public class Game : MonoBehaviour
     {
         [SerializeField] private Alien alienPrefab;
+        [SerializeField] private Alien alienWallbreakerPrefab;
+        [SerializeField] private Explosion explosionPrefab;
         [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private Image flashImage;
         [SerializeField] private AudioClip buildSound;
@@ -22,6 +24,8 @@ namespace __Game.Scripts
         public StructureBuildSelector StructureBuildSelector { get; private set; }
         
         public Pool<Alien> AlienPool { get; private set; }
+        public Pool<Alien> AlienWallbreakerPool { get; private set; }
+        public Pool<Explosion> ExplosionPool { get; private set; }
         public Pool<Bullet> BulletPool { get; private set; }
         
         public AudioSource AudioSource { get; private set; }
@@ -55,6 +59,8 @@ namespace __Game.Scripts
             StructureUI = FindObjectOfType<StructureUI>();
             StructureBuildSelector = FindObjectOfType<StructureBuildSelector>();
             AlienPool = new Pool<Alien>(alienPrefab);
+            AlienWallbreakerPool = new Pool<Alien>(alienWallbreakerPrefab);
+            ExplosionPool = new Pool<Explosion>(explosionPrefab);
             BulletPool = new Pool<Bullet>(bulletPrefab);
             AudioSource = GetComponent<AudioSource>();
             flashImage.gameObject.SetActive(false);
