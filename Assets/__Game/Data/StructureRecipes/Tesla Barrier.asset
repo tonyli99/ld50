@@ -15,4 +15,4 @@ MonoBehaviour:
   buttonSprite: {fileID: -2128936534, guid: 93c9ea26e56ab784d90faffbd9a601bc, type: 3}
   selectorSprite: {fileID: -2128936534, guid: 93c9ea26e56ab784d90faffbd9a601bc, type: 3}
   structure: {fileID: 8028064228717777933, guid: 9f5ae83026c468d4d8ca13e5d4419985, type: 3}
-  gasCost: 50
+  gasCost: 40

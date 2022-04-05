@@ -17,7 +17,7 @@ namespace __Game.Scripts
         [SerializeField] private Image flashImage;
         [SerializeField] private AudioClip buildSound;
         
-        private int startingGas = 200;
+        private int startingGas = 250;
         
         public Map Map { get; set; }
         public StructureUI StructureUI { get; private set; }

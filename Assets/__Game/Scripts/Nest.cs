@@ -17,6 +17,18 @@ namespace __Game.Scripts
         private int broodSize = 1;
         private int numSpawned = 0;
 
+        private int minToSpawnWallBreakers = 175;
+
+        private static int totalSpawned = 0;
+        
+#if UNITY_EDITOR
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void Init()
+        {
+            totalSpawned = 0;
+        }
+#endif
+
         private void Start()
         {
             InvokeRepeating(nameof(Spawn), spawnFrequency, initialSpawnDelay);
@@ -29,7 +41,8 @@ namespace __Game.Scripts
                 timeToEmerge = Time.time + emergeFrequency;
                 numToSpawn--;
                 numSpawned++;
-                if (numSpawned % 10 == 0)
+                totalSpawned++;
+                if (numSpawned % 10 == 0 && totalSpawned >= minToSpawnWallBreakers)
                 {
                     Game.Instance.AlienWallbreakerPool.Spawn(transform.position, Quaternion.identity);   
                 }
